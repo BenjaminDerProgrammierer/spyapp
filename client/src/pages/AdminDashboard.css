@@ -1,0 +1,41 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.segment-content {
+  margin-top: 20px;
+}
+
+.wordlist-format {
+  margin: 20px 0;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.wordlist-format pre {
+  overflow-x: auto;
+  background-color: #e8e8e8;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.no-words {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.mt-2 {
+  margin-top: 10px;
+}
+
+.list {
+    max-height: 500px;
+    overflow-x: scroll;
+}

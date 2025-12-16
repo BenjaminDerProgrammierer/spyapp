@@ -1,0 +1,14 @@
+node_modules
+dist
+npm-debug.log*
+.env
+.env.*
+uploads/*
+!uploads/.gitkeep
+*.log
+.git
+.gitignore
+README.md
+.DS_Store
+*.swp
+*.swo

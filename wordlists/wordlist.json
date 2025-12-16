@@ -1,0 +1,1104 @@
+{
+  "words": [
+    {
+      "id": 1,
+      "word": "elephant",
+      "category": "animals",
+      "hints": [
+        "large", "trunk", "tusks", "mammal", "safari",
+        "memory", "africa", "gray", "ivory", "ears",
+        "savannah", "herd", "wildlife", "conservation", "trumpeting",
+        "wrinkled", "herbivore", "zoo", "gentle", "thick-skinned"
+      ]
+    },
+    {
+      "id": 2,
+      "word": "piano",
+      "category": "music",
+      "hints": [
+        "keys", "instrument", "classical", "concert", "grand",
+        "ivory", "melody", "strings", "play", "bench",
+        "musician", "keyboard", "recital", "upright", "pedals",
+        "chord", "composition", "tuning", "acoustic", "harmonize"
+      ]
+    },
+    {
+      "id": 3,
+      "word": "basketball",
+      "category": "sports",
+      "hints": [
+        "dribble", "court", "hoop", "team", "tournament",
+        "nba", "players", "score", "ball", "coach",
+        "sneakers", "jersey", "referee", "backboard", "dunk",
+        "jumpshot", "timeout", "foul", "rebound", "assist"
+      ]
+    },
+    {
+      "id": 4,
+      "word": "pizza",
+      "category": "food",
+      "hints": [
+        "cheese", "topping", "italian", "crust", "delivery",
+        "pepperoni", "slice", "oven", "restaurant", "sauce",
+        "takeout", "dough", "margherita", "basil", "fresh",
+        "mozzarella", "round", "dinner", "fast-food", "bake"
+      ]
+    },
+    {
+      "id": 5,
+      "word": "tornado",
+      "category": "nature",
+      "hints": [
+        "wind", "storm", "funnel", "destruction", "twister",
+        "cyclone", "midwest", "warning", "debris", "rotation",
+        "siren", "shelter", "disaster", "damage", "meteorology",
+        "clouds", "weather", "vortex", "spinning", "touchdown"
+      ]
+    },
+    {
+      "id": 6,
+      "word": "laptop",
+      "category": "technology",
+      "hints": [
+        "computer", "portable", "screen", "keyboard", "battery",
+        "wifi", "mouse", "processor", "memory", "webcam",
+        "charging", "brand", "software", "touchpad", "bluetooth",
+        "lightweight", "office", "notebook", "usb", "slim"
+      ]
+    },
+    {
+      "id": 7,
+      "word": "telescope",
+      "category": "science",
+      "hints": [
+        "stars", "astronomy", "lens", "space", "observation",
+        "galaxy", "magnify", "observatory", "distance", "scope",
+        "planet", "instrument", "hubble", "moon", "focus",
+        "celestial", "mirror", "viewing", "astronomer", "night"
+      ]
+    },
+    {
+      "id": 8,
+      "word": "pyramid",
+      "category": "architecture",
+      "hints": [
+        "egypt", "ancient", "structure", "tomb", "pharaoh",
+        "stone", "desert", "triangular", "giza", "monument",
+        "archaeological", "wonder", "civilization", "limestone", "burial",
+        "sphinx", "treasure", "chambers", "hieroglyphics", "mummy"
+      ]
+    },
+    {
+      "id": 9,
+      "word": "firework",
+      "category": "events",
+      "hints": [
+        "explosion", "celebration", "colorful", "sky", "display",
+        "rocket", "fourth", "sparklers", "night", "festival",
+        "independence", "new-year", "bright", "spectacle", "pyrotechnics",
+        "loud", "sparks", "celebration", "launch", "pattern"
+      ]
+    },
+    {
+      "id": 10,
+      "word": "ballet",
+      "category": "arts",
+      "hints": [
+        "dance", "pointe", "tutu", "performance", "graceful",
+        "theater", "rehearsal", "choreography", "costume", "pirouette",
+        "plié", "discipline", "classical", "elegant", "stretch",
+        "routine", "slipper", "stage", "troupe", "movement"
+      ]
+    },
+    {
+      "id": 11,
+      "word": "democracy",
+      "category": "politics",
+      "hints": [
+        "vote", "election", "government", "freedom", "rights",
+        "citizens", "representation", "equality", "ballot", "congress",
+        "participation", "liberty", "constitution", "majority", "parliament",
+        "president", "civic", "politician", "campaign", "republic"
+      ]
+    },
+    {
+      "id": 12,
+      "word": "submarine",
+      "category": "vehicles",
+      "hints": [
+        "underwater", "navy", "vessel", "periscope", "torpedo",
+        "crew", "dive", "ocean", "military", "sonar",
+        "depth", "maritime", "hull", "propeller", "captain",
+        "fleet", "stealth", "navigation", "nuclear", "pressurized"
+      ]
+    },
+    {
+      "id": 13,
+      "word": "detective",
+      "category": "professions",
+      "hints": [
+        "investigate", "crime", "clues", "mystery", "police",
+        "private", "case", "solve", "evidence", "suspect",
+        "inspector", "deduction", "investigation", "witness", "magnifying",
+        "interrogation", "undercover", "forensic", "sleuth", "agency"
+      ]
+    },
+    {
+      "id": 14,
+      "word": "rainbow",
+      "category": "nature",
+      "hints": [
+        "colors", "sky", "rain", "arch", "spectrum",
+        "weather", "sunshine", "prism", "storm", "phenomenon",
+        "beautiful", "optical", "vibrant", "refraction", "droplets",
+        "sunlight", "moisture", "horizon", "atmospheric", "hue"
+      ]
+    },
+    {
+      "id": 15,
+      "word": "bicycle",
+      "category": "transportation",
+      "hints": [
+        "wheels", "pedals", "chain", "ride", "cycle",
+        "handlebars", "gear", "frame", "helmet", "brakes",
+        "tire", "pump", "mountain", "road", "racing",
+        "seat", "spokes", "eco-friendly", "exercise", "commute"
+      ]
+    },
+    {
+      "id": 16,
+      "word": "dictionary",
+      "category": "books",
+      "hints": [
+        "words", "definitions", "reference", "language", "alphabetical",
+        "spelling", "thesaurus", "lookup", "lexicon", "meaning",
+        "vocabulary", "entries", "pronunciation", "etymology", "usage",
+        "glossary", "volume", "pages", "publishing", "comprehensive"
+      ]
+    },
+    {
+      "id": 17,
+      "word": "chocolate",
+      "category": "food",
+      "hints": [
+        "sweet", "cocoa", "dessert", "candy", "dark",
+        "milk", "treat", "sugar", "bar", "confectionery",
+        "truffle", "flavor", "fondue", "rich", "delicious",
+        "melting", "bean", "cake", "shop", "tempered"
+      ]
+    },
+    {
+      "id": 18,
+      "word": "smartphone",
+      "category": "technology",
+      "hints": [
+        "app", "mobile", "touchscreen", "device", "call",
+        "text", "internet", "camera", "battery", "wireless",
+        "charging", "data", "operating", "browser", "contact",
+        "cellular", "pocket", "messaging", "portable", "download"
+      ]
+    },
+    {
+      "id": 19,
+      "word": "astronaut",
+      "category": "science",
+      "hints": [
+        "space", "nasa", "mission", "rocket", "orbit",
+        "moon", "training", "weightless", "spacecraft", "exploration",
+        "suit", "gravity", "launch", "international", "commander",
+        "capsule", "flight", "journey", "expedition", "stellar"
+      ]
+    },
+    {
+      "id": 20,
+      "word": "skyscraper",
+      "category": "architecture",
+      "hints": [
+        "tall", "building", "floors", "urban", "tower",
+        "office", "elevator", "downtown", "steel", "modern",
+        "design", "skyline", "structure", "architect", "windows",
+        "landmark", "construction", "metropolitan", "high-rise", "commercial"
+      ]
+    },
+    {
+      "id": 21,
+      "word": "wedding",
+      "category": "events",
+      "hints": [
+        "ceremony", "bride", "groom", "marriage", "reception",
+        "dress", "celebration", "ring", "vow", "cake",
+        "invitation", "honeymoon", "flowers", "photographer", "venue",
+        "family", "tradition", "formal", "toast", "anniversary"
+      ]
+    },
+    {
+      "id": 22,
+      "word": "painting",
+      "category": "arts",
+      "hints": [
+        "artist", "canvas", "brush", "color", "gallery",
+        "frame", "portrait", "landscape", "exhibit", "masterpiece",
+        "composition", "perspective", "artwork", "museum", "oil",
+        "acrylic", "display", "collection", "watercolor", "easel"
+      ]
+    },
+    {
+      "id": 23,
+      "word": "election",
+      "category": "politics",
+      "hints": [
+        "vote", "candidate", "ballot", "campaign", "democracy",
+        "politician", "party", "polling", "president", "debate",
+        "citizen", "victory", "results", "senator", "governor",
+        "congress", "majority", "voter", "administration", "outcome"
+      ]
+    },
+    {
+      "id": 24,
+      "word": "helicopter",
+      "category": "vehicles",
+      "hints": [
+        "rotor", "pilot", "blade", "flight", "aircraft",
+        "hovering", "chopper", "aerial", "cockpit", "landing",
+        "rescue", "transport", "emergency", "military", "takeoff",
+        "civilian", "noise", "passenger", "flying", "vertical"
+      ]
+    },
+    {
+      "id": 25,
+      "word": "doctor",
+      "category": "professions",
+      "hints": [
+        "medical", "hospital", "patient", "healthcare", "treatment",
+        "physician", "clinic", "diagnosis", "medicine", "specialist",
+        "examination", "prescription", "symptom", "stethoscope", "therapy",
+        "surgery", "consultation", "health", "disease", "care"
+      ]
+    },
+    {
+      "id": 26,
+      "word": "volcano",
+      "category": "nature",
+      "hints": [
+        "eruption", "lava", "mountain", "ash", "magma",
+        "crater", "active", "dormant", "geothermal", "pressure",
+        "tectonic", "heat", "molten", "rock", "flow",
+        "smoke", "island", "formation", "explosive", "seismic"
+      ]
+    },
+    {
+      "id": 27,
+      "word": "airplane",
+      "category": "transportation",
+      "hints": [
+        "flight", "wings", "pilot", "airport", "passenger",
+        "jet", "runway", "takeoff", "landing", "cockpit",
+        "travel", "altitude", "airline", "boarding", "turbulence",
+        "aviation", "aircraft", "cabin", "luggage", "international"
+      ]
+    },
+    {
+      "id": 28,
+      "word": "novel",
+      "category": "books",
+      "hints": [
+        "story", "fiction", "author", "character", "plot",
+        "pages", "reading", "literature", "chapter", "paperback",
+        "hardcover", "bestseller", "narrative", "publisher", "release",
+        "bookstore", "series", "publication", "writer", "reader"
+      ]
+    },
+    {
+      "id": 29,
+      "word": "hamburger",
+      "category": "food",
+      "hints": [
+        "beef", "bun", "restaurant", "fast-food", "patty",
+        "cheese", "lettuce", "tomato", "pickles", "ketchup",
+        "grill", "mustard", "onion", "fries", "mayo",
+        "sesame", "classic", "barbecue", "menu", "juicy"
+      ]
+    },
+    {
+      "id": 30,
+      "word": "robot",
+      "category": "technology",
+      "hints": [
+        "machine", "automated", "programming", "mechanical", "artificial",
+        "engineering", "sensors", "motor", "control", "electronic",
+        "interaction", "future", "design", "industrial", "humanoid",
+        "coding", "automation", "laboratory", "prototype", "innovation"
+      ]
+    },
+    {
+      "id": 31,
+      "word": "microscope",
+      "category": "science",
+      "hints": [
+        "small", "magnify", "laboratory", "lens", "specimen",
+        "slide", "observation", "biology", "research", "optical",
+        "electron", "focus", "cellular", "compound", "eyepiece",
+        "magnification", "objective", "scientific", "examination", "microorganism"
+      ]
+    },
+    {
+      "id": 32,
+      "word": "castle",
+      "category": "architecture",
+      "hints": [
+        "medieval", "stone", "fortress", "tower", "moat",
+        "royalty", "history", "kingdom", "walls", "drawbridge",
+        "knight", "ancient", "defense", "throne", "dungeon",
+        "turret", "courtyard", "heritage", "rampart", "historic"
+      ]
+    },
+    {
+      "id": 33,
+      "word": "marathon",
+      "category": "events",
+      "hints": [
+        "running", "distance", "race", "endurance", "finish",
+        "training", "athlete", "course", "miles", "competition",
+        "track", "starting", "challenge", "fitness", "runner",
+        "medal", "participants", "city", "route", "stamina"
+      ]
+    },
+    {
+      "id": 34,
+      "word": "sculpture",
+      "category": "arts",
+      "hints": [
+        "three-dimensional", "statue", "artist", "marble", "clay",
+        "bronze", "carving", "exhibit", "museum", "stone",
+        "contemporary", "gallery", "artistic", "creation", "masterpiece",
+        "modeling", "form", "installation", "figure", "craftsmanship"
+      ]
+    },
+    {
+      "id": 35,
+      "word": "ambassador",
+      "category": "politics",
+      "hints": [
+        "diplomatic", "embassy", "representative", "foreign", "country",
+        "international", "diplomat", "relations", "mission", "government",
+        "official", "appointment", "consulate", "affairs", "policy",
+        "credentials", "protocol", "residence", "bilateral", "diplomatic"
+      ]
+    },
+    {
+      "id": 36,
+      "word": "motorcycle",
+      "category": "vehicles",
+      "hints": [
+        "bike", "engine", "rider", "helmet", "wheels",
+        "speed", "road", "license", "safety", "ride",
+        "cruising", "wind", "freedom", "throttle", "leather",
+        "chrome", "handlebars", "powerful", "gear", "custom"
+      ]
+    },
+    {
+      "id": 37,
+      "word": "astronomer",
+      "category": "professions",
+      "hints": [
+        "stars", "space", "telescope", "research", "scientist",
+        "galaxy", "cosmos", "observation", "celestial", "physics",
+        "astronomy", "discovery", "planetary", "academia", "astrophysics",
+        "observatory", "cosmic", "university", "theory", "exploration"
+      ]
+    },
+    {
+      "id": 38,
+      "word": "avalanche",
+      "category": "nature",
+      "hints": [
+        "snow", "mountain", "danger", "sliding", "winter",
+        "slope", "disaster", "ice", "trigger", "buried",
+        "rescue", "alpine", "safety", "sudden", "mass",
+        "collapse", "warning", "terrain", "skiing", "survival"
+      ]
+    },
+    {
+      "id": 39,
+      "word": "taxi",
+      "category": "transportation",
+      "hints": [
+        "cab", "driver", "fare", "passenger", "yellow",
+        "ride", "meter", "service", "airport", "downtown",
+        "transportation", "pickup", "destination", "license", "tip",
+        "dispatch", "hired", "urban", "vehicle", "professional"
+      ]
+    },
+    {
+      "id": 40,
+      "word": "encyclopedia",
+      "category": "books",
+      "hints": [
+        "knowledge", "reference", "volumes", "information", "comprehensive",
+        "articles", "research", "alphabetical", "entries", "educational",
+        "facts", "collection", "subjects", "library", "set",
+        "publication", "editors", "compilation", "academic", "scholarly"
+      ]
+    },
+    {
+      "id": 41,
+      "word": "spaghetti",
+      "category": "food",
+      "hints": [
+        "pasta", "italian", "sauce", "noodle", "tomato",
+        "meatballs", "parmesan", "garlic", "dinner", "restaurant",
+        "fork", "twirl", "dish", "cooking", "boil",
+        "cuisine", "traditional", "meal", "recipe", "authentic"
+      ]
+    },
+    {
+      "id": 42,
+      "word": "internet",
+      "category": "technology",
+      "hints": [
+        "connection", "network", "web", "online", "website",
+        "browser", "digital", "access", "email", "search",
+        "wireless", "router", "provider", "global", "surf",
+        "bandwidth", "communication", "data", "server", "virtual"
+      ]
+    },
+    {
+      "id": 43,
+      "word": "genetics",
+      "category": "science",
+      "hints": [
+        "dna", "heredity", "chromosome", "genes", "research",
+        "biology", "inheritance", "mutation", "laboratory", "scientist",
+        "genotype", "phenotype", "sequence", "molecular", "trait",
+        "study", "genome", "analysis", "hereditary", "cellular"
+      ]
+    },
+    {
+      "id": 44,
+      "word": "lighthouse",
+      "category": "architecture",
+      "hints": [
+        "beacon", "coast", "tower", "maritime", "navigation",
+        "warning", "ocean", "shore", "sailor", "light",
+        "beam", "signal", "nautical", "coastal", "keeper",
+        "guidance", "landmark", "vessel", "rocky", "illumination"
+      ]
+    },
+    {
+      "id": 45,
+      "word": "festival",
+      "category": "events",
+      "hints": [
+        "celebration", "music", "cultural", "event", "crowd",
+        "performance", "entertainment", "annual", "food", "dance",
+        "outdoor", "tradition", "participants", "artists", "community",
+        "stage", "booths", "activities", "seasonal", "showcase"
+      ]
+    },
+    {
+      "id": 46,
+      "word": "photography",
+      "category": "arts",
+      "hints": [
+        "camera", "picture", "image", "photographer", "lens",
+        "digital", "capture", "flash", "shutter", "memory",
+        "editing", "studio", "film", "portrait", "focus",
+        "professional", "shot", "album", "composition", "exposure"
+      ]
+    },
+    {
+      "id": 47,
+      "word": "president",
+      "category": "politics",
+      "hints": [
+        "leader", "country", "election", "executive", "office",
+        "administration", "candidate", "term", "government", "nation",
+        "campaign", "political", "official", "commander", "cabinet",
+        "authority", "citizen", "policy", "inaugural", "constitutional"
+      ]
+    },
+    {
+      "id": 48,
+      "word": "spaceship",
+      "category": "vehicles",
+      "hints": [
+        "rocket", "astronaut", "space", "mission", "launch",
+        "orbit", "crew", "exploration", "interstellar", "flight",
+        "alien", "journey", "discovery", "gravity", "commander",
+        "spacecraft", "navigation", "futuristic", "propulsion", "module"
+      ]
+    },
+    {
+      "id": 49,
+      "word": "firefighter",
+      "category": "professions",
+      "hints": [
+        "emergency", "rescue", "fire", "brave", "station",
+        "hazard", "uniform", "truck", "hose", "ladder",
+        "extinguisher", "crew", "safety", "response", "alarm",
+        "training", "protection", "courage", "smoke", "equipment"
+      ]
+    },
+    {
+      "id": 50,
+      "word": "waterfall",
+      "category": "nature",
+      "hints": [
+        "flowing", "cascade", "water", "river", "rocks",
+        "rushing", "stream", "drop", "scenic", "mist",
+        "natural", "landscape", "splashing", "height", "pool",
+        "gravity", "powerful", "formation", "plunge", "gorge"
+      ]
+    },
+    {
+      "id": 51,
+      "word": "whale",
+      "category": "animals",
+      "hints": [
+        "ocean", "mammal", "marine", "giant", "blowhole",
+        "diving", "majestic", "blubbery", "aquatic", "species",
+        "pod", "sea", "tail", "migration", "underwater",
+        "breaching", "endangered", "intelligence", "communication", "humpback"
+      ]
+    },
+    {
+      "id": 52,
+      "word": "guitar",
+      "category": "music",
+      "hints": [
+        "strings", "instrument", "musician", "acoustic", "electric",
+        "amplifier", "frets", "pick", "chord", "solo",
+        "band", "riff", "strumming", "playing", "tuning",
+        "neck", "sound", "artist", "notes", "melody"
+      ]
+    },
+    {
+      "id": 53,
+      "word": "soccer",
+      "category": "sports",
+      "hints": [
+        "football", "goal", "field", "team", "player",
+        "ball", "game", "score", "match", "tournament",
+        "referee", "goalkeeper", "penalty", "kick", "defender",
+        "midfielder", "striker", "coach", "fans", "league"
+      ]
+    },
+    {
+      "id": 54,
+      "word": "sushi",
+      "category": "food",
+      "hints": [
+        "japanese", "rice", "fish", "raw", "seaweed",
+        "roll", "wasabi", "soy", "restaurant", "chef",
+        "chopsticks", "salmon", "tuna", "ginger", "avocado",
+        "fresh", "delicacy", "cuisine", "nigiri", "maki"
+      ]
+    },
+    {
+      "id": 55,
+      "word": "earthquake",
+      "category": "nature",
+      "hints": [
+        "shake", "tremor", "seismic", "ground", "disaster",
+        "plate", "fault", "richter", "epicenter", "magnitude",
+        "geology", "damage", "vibration", "shock", "tectonic",
+        "natural", "destruction", "warning", "aftershock", "measurement"
+      ]
+    },
+    {
+      "id": 56,
+      "word": "camera",
+      "category": "technology",
+      "hints": [
+        "photo", "lens", "image", "digital", "shutter",
+        "picture", "focus", "flash", "capture", "film",
+        "memory", "photographer", "shooting", "aperture", "equipment",
+        "professional", "megapixel", "compact", "photography", "viewfinder"
+      ]
+    },
+    {
+      "id": 57,
+      "word": "satellite",
+      "category": "science",
+      "hints": [
+        "orbit", "space", "communication", "transmission", "signal",
+        "launch", "earth", "data", "station", "dish",
+        "broadcasting", "receiver", "technology", "solar", "monitoring",
+        "GPS", "imagery", "weather", "tracking", "astronomical"
+      ]
+    },
+    {
+      "id": 58,
+      "word": "cathedral",
+      "category": "architecture",
+      "hints": [
+        "church", "gothic", "religious", "dome", "worship",
+        "medieval", "stained", "bishop", "bell", "tower",
+        "spire", "altar", "historic", "stone", "prayer",
+        "sanctuary", "congregation", "tradition", "spiritual", "landmark"
+      ]
+    },
+    {
+      "id": 59,
+      "word": "circus",
+      "category": "events",
+      "hints": [
+        "acrobat", "clown", "tent", "performance", "ringmaster",
+        "trapeze", "entertainment", "audience", "animals", "show",
+        "magic", "juggling", "costume", "tickets", "stunts",
+        "spectacle", "performers", "traveling", "troupe", "amazing"
+      ]
+    },
+    {
+      "id": 60,
+      "word": "orchestra",
+      "category": "arts",
+      "hints": [
+        "conductor", "musician", "symphony", "instrument", "concert",
+        "classical", "stage", "performance", "music", "strings",
+        "brass", "woodwind", "percussion", "rehearsal", "musical",
+        "composition", "director", "ensemble", "philharmonic", "score"
+      ]
+    },
+    {
+      "id": 61,
+      "word": "diplomat",
+      "category": "politics",
+      "hints": [
+        "embassy", "international", "relations", "foreign", "negotiation",
+        "representative", "mission", "affairs", "delegation", "protocol",
+        "official", "diplomatic", "policy", "consul", "ambassador",
+        "government", "negotiations", "treaty", "alliance", "credentials"
+      ]
+    },
+    {
+      "id": 62,
+      "word": "sailboat",
+      "category": "vehicles",
+      "hints": [
+        "wind", "sail", "water", "ocean", "mast",
+        "maritime", "vessel", "navigation", "yacht", "sailing",
+        "crew", "captain", "port", "deck", "marina",
+        "coastal", "voyage", "anchor", "helm", "nautical"
+      ]
+    },
+    {
+      "id": 63,
+      "word": "teacher",
+      "category": "professions",
+      "hints": [
+        "education", "school", "classroom", "student", "lesson",
+        "learning", "instruction", "knowledge", "curriculum", "educator",
+        "teaching", "academic", "faculty", "mentor", "elementary",
+        "secondary", "subject", "grading", "professor", "tutor"
+      ]
+    },
+    {
+      "id": 64,
+      "word": "glacier",
+      "category": "nature",
+      "hints": [
+        "ice", "mountain", "frozen", "slow", "arctic",
+        "formation", "melting", "climate", "massive", "cold",
+        "movement", "valley", "alpine", "snow", "blue",
+        "ancient", "winter", "geography", "erosion", "retreat"
+      ]
+    },
+    {
+      "id": 65,
+      "word": "train",
+      "category": "transportation",
+      "hints": [
+        "railroad", "tracks", "station", "passenger", "railway",
+        "locomotive", "journey", "carriage", "ticket", "conductor",
+        "destination", "schedule", "platform", "freight", "terminal",
+        "express", "transit", "route", "depot", "boarding"
+      ]
+    },
+    {
+      "id": 66,
+      "word": "biography",
+      "category": "books",
+      "hints": [
+        "life", "person", "story", "account", "history",
+        "autobiography", "subject", "writer", "published", "figure",
+        "memoir", "narrative", "factual", "documentary", "chronological",
+        "notable", "historical", "individual", "documentation", "personal"
+      ]
+    },
+    {
+      "id": 67,
+      "word": "cupcake",
+      "category": "food",
+      "hints": [
+        "frosting", "dessert", "sweet", "baking", "cake",
+        "icing", "sprinkles", "mini", "vanilla", "chocolate",
+        "bakery", "muffin", "treat", "decorated", "birthday",
+        "batter", "pastry", "homemade", "delicious", "confection"
+      ]
+    },
+    {
+      "id": 68,
+      "word": "computer",
+      "category": "technology",
+      "hints": [
+        "software", "hardware", "keyboard", "screen", "processor",
+        "memory", "digital", "desktop", "laptop", "monitor",
+        "mouse", "device", "program", "data", "internet",
+        "system", "electronic", "storage", "computing", "user"
+      ]
+    },
+    {
+      "id": 69,
+      "word": "chemistry",
+      "category": "science",
+      "hints": [
+        "elements", "laboratory", "experiment", "reaction", "molecule",
+        "scientist", "compound", "formula", "research", "study",
+        "matter", "periodic", "substance", "solution", "academic",
+        "organic", "chemical", "analysis", "scientific", "properties"
+      ]
+    },
+    {
+      "id": 70,
+      "word": "stadium",
+      "category": "architecture",
+      "hints": [
+        "sports", "arena", "crowd", "seating", "field",
+        "event", "game", "spectator", "venue", "match",
+        "team", "structure", "athletic", "competition", "stands",
+        "capacity", "bleachers", "facilities", "design", "construction"
+      ]
+    },
+    {
+      "id": 71,
+      "word": "graduation",
+      "category": "events",
+      "hints": [
+        "ceremony", "diploma", "student", "achievement", "cap",
+        "gown", "celebration", "degree", "academic", "commencement",
+        "university", "education", "accomplishment", "tassel", "graduate",
+        "college", "senior", "finish", "convocation", "alumni"
+      ]
+    },
+    {
+      "id": 72,
+      "word": "symphony",
+      "category": "arts",
+      "hints": [
+        "orchestra", "classical", "music", "composer", "concert",
+        "movement", "conductor", "performance", "composition", "musician",
+        "score", "harmony", "audience", "instrumental", "philharmonic",
+        "masterpiece", "strings", "arrangement", "ensemble", "melody"
+      ]
+    },
+    {
+      "id": 73,
+      "word": "parliament",
+      "category": "politics",
+      "hints": [
+        "government", "legislature", "representatives", "democracy", "session",
+        "debate", "elected", "legislation", "voting", "assembly",
+        "political", "chamber", "democratic", "speaker", "parties",
+        "members", "system", "constitutional", "legislative", "institution"
+      ]
+    },
+    {
+      "id": 74,
+      "word": "cruise",
+      "category": "vehicles",
+      "hints": [
+        "ship", "ocean", "vacation", "travel", "passenger",
+        "liner", "voyage", "port", "sailing", "deck",
+        "captain", "destination", "holiday", "luxury", "maritime",
+        "entertainment", "cabin", "journey", "vessel", "boarding"
+      ]
+    },
+    {
+      "id": 75,
+      "word": "architect",
+      "category": "professions",
+      "hints": [
+        "design", "building", "blueprint", "structure", "construction",
+        "planning", "creative", "project", "firm", "sketches",
+        "professional", "vision", "drawing", "urban", "residential",
+        "layout", "concept", "technical", "innovation", "aesthetic"
+      ]
+    },
+    {
+      "id": 76,
+      "word": "desert",
+      "category": "nature",
+      "hints": [
+        "sand", "dry", "hot", "arid", "dune",
+        "oasis", "cactus", "barren", "landscape", "sun",
+        "climate", "wilderness", "camel", "terrain", "scorching",
+        "sparse", "region", "desolate", "ecosystem", "survival"
+      ]
+    },
+    {
+      "id": 77,
+      "word": "bus",
+      "category": "transportation",
+      "hints": [
+        "public", "transportation", "passengers", "route", "stop",
+        "driver", "fare", "schedule", "transit", "commute",
+        "service", "city", "seat", "ticket", "station",
+        "system", "vehicle", "travel", "mass", "transportation"
+      ]
+    },
+    {
+      "id": 78,
+      "word": "poetry",
+      "category": "books",
+      "hints": [
+        "verse", "rhyme", "poet", "writing", "stanza",
+        "literary", "meter", "creative", "collection", "expression",
+        "literary", "language", "rhythm", "art", "emotion",
+        "metaphor", "sonnet", "imagery", "anthology", "composition"
+      ]
+    },
+    {
+      "id": 79,
+      "word": "breakfast",
+      "category": "food",
+      "hints": [
+        "morning", "meal", "eggs", "coffee", "pancakes",
+        "bacon", "toast", "cereal", "juice", "early",
+        "brunch", "oatmeal", "first", "waking", "fresh",
+        "daily", "pastry", "traditional", "routine", "energy"
+      ]
+    },
+    {
+      "id": 80,
+      "word": "social media",
+      "category": "technology",
+      "hints": [
+        "online", "platform", "networking", "share", "profile",
+        "post", "friends", "followers", "content", "digital",
+        "communication", "interaction", "app", "trending", "engagement",
+        "influence", "virtual", "community", "update", "presence"
+      ]
+    },
+    {
+      "id": 81,
+      "word": "botany",
+      "category": "science",
+      "hints": [
+        "plants", "study", "biology", "species", "garden",
+        "research", "classification", "growth", "flower", "scientist",
+        "nature", "flora", "vegetation", "cultivation", "ecosystem",
+        "specimen", "herbarium", "pollination", "taxonomy", "environmental"
+      ]
+    },
+    {
+      "id": 82,
+      "word": "bridge",
+      "category": "architecture",
+      "hints": [
+        "crossing", "structure", "span", "river", "connection",
+        "suspension", "construction", "design", "engineering", "arch",
+        "steel", "concrete", "pedestrian", "traffic", "landmark",
+        "foundation", "passage", "length", "supporting", "infrastructure"
+      ]
+    },
+    {
+      "id": 83,
+      "word": "concert",
+      "category": "events",
+      "hints": [
+        "music", "performance", "band", "stage", "audience",
+        "live", "venue", "ticket", "artist", "tour",
+        "show", "crowd", "sound", "fans", "entertainment",
+        "performer", "singing", "dancing", "musical", "event"
+      ]
+    },
+    {
+      "id": 84,
+      "word": "theater",
+      "category": "arts",
+      "hints": [
+        "play", "stage", "actors", "audience", "performance",
+        "drama", "production", "script", "acting", "director",
+        "curtain", "scene", "cast", "rehearsal", "theatrical",
+        "costume", "broadway", "dialogue", "props", "musical"
+      ]
+    },
+    {
+      "id": 85,
+      "word": "monarchy",
+      "category": "politics",
+      "hints": [
+        "king", "queen", "royal", "crown", "throne",
+        "kingdom", "sovereign", "palace", "ruler", "hereditary",
+        "dynasty", "tradition", "constitutional", "reign", "prince",
+        "princess", "succession", "ceremony", "historical", "authority"
+      ]
+    },
+    {
+      "id": 86,
+      "word": "ambulance",
+      "category": "vehicles",
+      "hints": [
+        "emergency", "medical", "siren", "paramedic", "hospital",
+        "vehicle", "response", "urgent", "patient", "stretcher",
+        "healthcare", "rescue", "team", "treatment", "transport",
+        "lights", "road", "critical", "assistance", "dispatch"
+      ]
+    },
+    {
+      "id": 87,
+      "word": "journalist",
+      "category": "professions",
+      "hints": [
+        "news", "reporter", "media", "story", "article",
+        "writing", "newspaper", "press", "interview", "editor",
+        "publication", "investigate", "broadcast", "current", "column",
+        "information", "coverage", "correspondent", "reporting", "editorial"
+      ]
+    },
+    {
+      "id": 88,
+      "word": "forest",
+      "category": "nature",
+      "hints": [
+        "trees", "woods", "wildlife", "green", "wilderness",
+        "ecosystem", "hiking", "natural", "vegetation", "conservation",
+        "canopy", "woodland", "pine", "environment", "shade",
+        "trunk", "dense", "habitat", "foliage", "undergrowth"
+      ]
+    },
+    {
+      "id": 89,
+      "word": "subway",
+      "category": "transportation",
+      "hints": [
+        "underground", "metro", "train", "transit", "station",
+        "urban", "transport", "commute", "rail", "ticket",
+        "passengers", "platform", "system", "metropolitan", "route",
+        "public", "schedule", "tunnel", "map", "line"
+      ]
+    },
+    {
+      "id": 90,
+      "word": "magazine",
+      "category": "books",
+      "hints": [
+        "publication", "periodical", "article", "issue", "subscription",
+        "monthly", "editor", "glossy", "cover", "reader",
+        "feature", "editorial", "publisher", "newsstand", "column",
+        "content", "advertising", "fashion", "photography", "regular"
+      ]
+    },
+    {
+      "id": 91,
+      "word": "coffee",
+      "category": "food",
+      "hints": [
+        "beans", "caffeine", "drink", "morning", "cup",
+        "brew", "espresso", "cafe", "hot", "aromatic",
+        "roasted", "beverage", "grinder", "fresh", "barista",
+        "latte", "flavor", "arabica", "shop", "strength"
+      ]
+    },
+    {
+      "id": 92,
+      "word": "smartphone",
+      "category": "technology",
+      "hints": [
+        "cellular", "mobile", "app", "touchscreen", "device",
+        "call", "text", "wireless", "android", "iphone",
+        "battery", "data", "portable", "screen", "digital",
+        "internet", "communication", "camera", "electronic", "smart"
+      ]
+    },
+    {
+      "id": 93,
+      "word": "meteorology",
+      "category": "science",
+      "hints": [
+        "weather", "forecast", "atmosphere", "climate", "prediction",
+        "study", "storm", "conditions", "meteorologist", "temperature",
+        "precipitation", "humidity", "barometer", "pressure", "satellite",
+        "radar", "clouds", "patterns", "data", "observation"
+      ]
+    },
+    {
+      "id": 94,
+      "word": "windmill",
+      "category": "architecture",
+      "hints": [
+        "wind", "blades", "energy", "farm", "rotation",
+        "traditional", "power", "tower", "renewable", "dutch",
+        "countryside", "structure", "historic", "grain", "turbine",
+        "agricultural", "sustainable", "spinning", "landmark", "sails"
+      ]
+    },
+    {
+      "id": 95,
+      "word": "carnival",
+      "category": "events",
+      "hints": [
+        "festival", "rides", "games", "fair", "amusement",
+        "celebration", "entertainment", "colorful", "booths", "prizes",
+        "midway", "cotton", "candy", "ferris", "wheel",
+        "ticket", "theme", "attraction", "fun", "seasonal"
+      ]
+    },
+    {
+      "id": 96,
+      "word": "opera",
+      "category": "arts",
+      "hints": [
+        "singing", "music", "performance", "dramatic", "soprano",
+        "stage", "aria", "classical", "production", "theatrical",
+        "libretto", "orchestra", "composer", "costume", "voice",
+        "scene", "score", "tenor", "tragedy", "dramatic"
+      ]
+    },
+    {
+      "id": 97,
+      "word": "constitution",
+      "category": "politics",
+      "hints": [
+        "law", "government", "rights", "document", "founding",
+        "amendment", "legal", "nation", "principle", "framework",
+        "democratic", "judicial", "legislative", "executive", "civil",
+        "freedom", "authority", "fundamental", "society", "republic"
+      ]
+    },
+    {
+      "id": 98,
+      "word": "rocket",
+      "category": "vehicles",
+      "hints": [
+        "space", "launch", "propulsion", "missile", "flight",
+        "spacecraft", "orbit", "astronaut", "fuel", "engineering",
+        "exploration", "booster", "nasa", "mission", "thrust",
+        "velocity", "trajectory", "countdown", "technology", "altitude"
+      ]
+    },
+    {
+      "id": 99,
+      "word": "chef",
+      "category": "professions",
+      "hints": [
+        "cooking", "restaurant", "culinary", "kitchen", "food",
+        "recipe", "gourmet", "cuisine", "professional", "menu",
+        "preparation", "dinner", "meal", "taste", "flavor",
+        "ingredients", "training", "dish", "creativity", "presentation"
+      ]
+    },
+    {
+      "id": 100,
+      "word": "island",
+      "category": "nature",
+      "hints": [
+        "ocean", "tropical", "beach", "isolated", "coast",
+        "paradise", "surrounded", "palm", "shore", "water",
+        "vacation", "resort", "sand", "exotic", "remote",
+        "landscape", "destination", "wildlife", "terrain", "formation"
+      ]
+    }
+  ]
+}
