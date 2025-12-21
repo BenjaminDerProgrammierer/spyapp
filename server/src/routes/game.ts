@@ -1,11 +1,12 @@
-import express from 'express';
-import { query } from '../config/db';
-import multer from 'multer';
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import dotenv from 'dotenv';
-import { getAllWordsWithHints, invalidateWordlistCache } from '../utils/wordUtils';
-import { verifyAdminPassword, getGameSettings, updateGameSettings } from '../utils/settingsUtils';
+import multer from 'multer';
+import express from 'express';
+
+import { query } from '../lib/db.ts';
+import { verifyAdminPassword, getGameSettings, updateGameSettings } from '../lib/settingsUtils.ts';
+import { getAllWordsWithHints, invalidateWordlistCache } from '../lib/wordUtils.ts';
 
 dotenv.config();
 
@@ -48,6 +49,7 @@ const checkAdminPassword = async (req: express.Request, res: express.Response, n
  *   get:
  *     summary: Get list of available games
  *     tags: [Games]
+ *     description: Returns all games that are currently in waiting status and accepting players
  *     responses:
  *       200:
  *         description: List of games waiting for players
@@ -58,12 +60,17 @@ const checkAdminPassword = async (req: express.Request, res: express.Response, n
  *               properties:
  *                 success:
  *                   type: boolean
+ *                   example: true
  *                 games:
  *                   type: array
  *                   items:
  *                     $ref: '#/components/schemas/Game'
  *       500:
  *         description: Server error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  */
 router.get('/list', async (req, res, next) => {
   try {
@@ -91,7 +98,7 @@ router.get('/list', async (req, res, next) => {
         id: game.id,
         hostId: game.host_id,
         hostName,
-        playerCount: parseInt(game.player_count),
+        playerCount: Number.parseInt(game.player_count),
         status: game.status,
         createdAt: game.created_at
       };
@@ -108,13 +115,14 @@ router.get('/list', async (req, res, next) => {
  * @swagger
  * /api/game/admin/wordlist:
  *   get:
- *     summary: Get the wordlist (Admin only)
+ *     summary: Get the complete wordlist (Admin only)
  *     tags: [Admin]
+ *     description: Returns all words with their hints and metadata from the active wordlist
  *     security:
  *       - bearerAuth: []
  *     responses:
  *       200:
- *         description: List of words
+ *         description: List of words with hints
  *         content:
  *           application/json:
  *             schema:
@@ -122,21 +130,23 @@ router.get('/list', async (req, res, next) => {
  *               properties:
  *                 success:
  *                   type: boolean
+ *                   example: true
  *                 words:
  *                   type: array
  *                   items:
- *                     type: object
- *                     properties:
- *                       word:
- *                         type: string
- *                       hints:
- *                         type: array
- *                         items:
- *                           type: string
+ *                     $ref: '#/components/schemas/Word'
  *       401:
- *         description: Unauthorized
+ *         description: Unauthorized - Invalid or missing admin password
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       500:
  *         description: Server error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  */
 router.get('/admin/wordlist', checkAdminPassword, async (req, res, next) => {
   try {
@@ -154,18 +164,20 @@ router.get('/admin/wordlist', checkAdminPassword, async (req, res, next) => {
  * @swagger
  * /api/game/{id}:
  *   get:
- *     summary: Get game details
+ *     summary: Get game details by ID
  *     tags: [Games]
+ *     description: Retrieves detailed information about a specific game including all players
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
  *         schema:
  *           type: string
- *         description: Game ID
+ *         description: Game ID (4-character code)
+ *         example: ABCD
  *     responses:
  *       200:
- *         description: Game details
+ *         description: Game details with player list
  *         content:
  *           application/json:
  *             schema:
@@ -173,12 +185,21 @@ router.get('/admin/wordlist', checkAdminPassword, async (req, res, next) => {
  *               properties:
  *                 success:
  *                   type: boolean
+ *                   example: true
  *                 game:
  *                   $ref: '#/components/schemas/Game'
  *       404:
  *         description: Game not found
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       500:
  *         description: Server error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  */
 router.get('/:id', async (req, res, next) => {
   try {
@@ -225,84 +246,11 @@ router.get('/:id', async (req, res, next) => {
 
 /**
  * @swagger
- * /api/game/setup:
- *   post:
- *     summary: Update the wordlist
- *     tags: [Wordlist]
- *     security:
- *       - BearerAuth: []
- *     requestBody:
- *       required: true
- *       content:
- *         multipart/form-data:
- *           schema:
- *             type: object
- *             properties:
- *               wordlist:
- *                 type: string
- *                 format: binary
- *     responses:
- *       200:
- *         description: Wordlist updated successfully
- *       401:
- *         description: Unauthorized
- *       500:
- *         description: Server error
- */
-router.post('/setup', checkAdminPassword, upload.single('wordlist'), async (req, res, next) => {
-  try {
-    if (!req.file) {
-      res.status(400).json({ success: false, error: 'No file uploaded' });
-      return;
-    }
-
-    // Read the uploaded file
-    const fileContent = fs.readFileSync(req.file.path, 'utf8');
-    const words = fileContent.split('\n')
-      .map(line => line.trim())
-      .filter(line => line.length > 0);
-    
-    if (words.length === 0) {
-      res.status(400).json({ success: false, error: 'No valid words found in file' });
-      return;
-    }
-
-    // Clear existing wordlist
-    await query('DELETE FROM wordlist', []);
-
-    // Insert new words
-    for (const word of words) {
-      await query(
-        'INSERT INTO wordlist (word, category) VALUES ($1, $2)',
-        [word, 'general']
-      );
-    }
-
-    // Clean up the uploaded file
-    fs.unlinkSync(req.file.path);
-
-    res.json({ 
-      success: true, 
-      message: `Wordlist updated successfully with ${words.length} words` 
-    });
-  } catch (error) {
-    console.error('Error updating wordlist:', error);
-    
-    // Clean up the uploaded file if it exists
-    if (req.file && fs.existsSync(req.file.path)) {
-      fs.unlinkSync(req.file.path);
-    }
-    
-    res.status(500).json({ success: false, error: 'Server error' });
-  }
-});
-
-/**
- * @swagger
  * /api/game/admin/verify:
  *   post:
  *     summary: Verify admin password
  *     tags: [Admin]
+ *     description: Validates whether the provided password matches the admin password
  *     requestBody:
  *       required: true
  *       content:
@@ -314,6 +262,8 @@ router.post('/setup', checkAdminPassword, upload.single('wordlist'), async (req,
  *             properties:
  *               password:
  *                 type: string
+ *                 description: Admin password to verify
+ *                 example: spymaster2025
  *     responses:
  *       200:
  *         description: Password verification result
@@ -324,10 +274,22 @@ router.post('/setup', checkAdminPassword, upload.single('wordlist'), async (req,
  *               properties:
  *                 success:
  *                   type: boolean
+ *                   example: true
  *                 isValid:
  *                   type: boolean
+ *                   description: Whether the password is valid
+ *       400:
+ *         description: Bad request - Password field missing
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       500:
  *         description: Server error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  */
 router.post('/admin/verify', async (req, res) => {
   try {
@@ -350,13 +312,14 @@ router.post('/admin/verify', async (req, res) => {
  * @swagger
  * /api/game/admin/settings:
  *   get:
- *     summary: Get game settings
+ *     summary: Get current game settings
  *     tags: [Admin]
+ *     description: Retrieves current game configuration settings (excludes admin password)
  *     security:
  *       - bearerAuth: []
  *     responses:
  *       200:
- *         description: Game settings
+ *         description: Current game settings
  *         content:
  *           application/json:
  *             schema:
@@ -364,12 +327,21 @@ router.post('/admin/verify', async (req, res) => {
  *               properties:
  *                 success:
  *                   type: boolean
+ *                   example: true
  *                 settings:
- *                   type: object
+ *                   $ref: '#/components/schemas/GameSettings'
  *       401:
- *         description: Unauthorized
+ *         description: Unauthorized - Invalid admin password
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       500:
  *         description: Server error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  */
 router.get('/admin/settings', checkAdminPassword, async (req, res) => {
   try {
@@ -391,6 +363,7 @@ router.get('/admin/settings', checkAdminPassword, async (req, res) => {
  *   put:
  *     summary: Update game settings
  *     tags: [Admin]
+ *     description: Updates one or more game configuration settings. All fields are optional.
  *     security:
  *       - bearerAuth: []
  *     requestBody:
@@ -402,13 +375,17 @@ router.get('/admin/settings', checkAdminPassword, async (req, res) => {
  *             properties:
  *               showHintsToRegularUsers:
  *                 type: boolean
+ *                 description: Whether regular (non-spy) players can see hints
  *               adminPassword:
  *                 type: string
+ *                 description: New admin password (minimum 1 character)
  *               minPlayersToStart:
  *                 type: integer
+ *                 minimum: 2
+ *                 description: Minimum players required to start a game (min 2)
  *     responses:
  *       200:
- *         description: Settings updated
+ *         description: Settings updated successfully
  *         content:
  *           application/json:
  *             schema:
@@ -416,10 +393,25 @@ router.get('/admin/settings', checkAdminPassword, async (req, res) => {
  *               properties:
  *                 success:
  *                   type: boolean
+ *                   example: true
+ *       400:
+ *         description: Bad request - Invalid settings values
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       401:
- *         description: Unauthorized
+ *         description: Unauthorized - Invalid admin password
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       500:
  *         description: Server error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  */
 router.put('/admin/settings', checkAdminPassword, async (req, res) => {
   try {
@@ -436,7 +428,7 @@ router.put('/admin/settings', checkAdminPassword, async (req, res) => {
     }
     
     if (minPlayersToStart !== undefined) {
-      settings.minPlayersToStart = Math.max(2, parseInt(minPlayersToStart, 10) || 3);
+      settings.minPlayersToStart = Math.max(2, Number.parseInt(minPlayersToStart, 10) || 3);
     }
     
     const updated = await updateGameSettings(settings);
@@ -457,8 +449,14 @@ router.put('/admin/settings', checkAdminPassword, async (req, res) => {
  * @swagger
  * /api/game/admin/wordlist/upload:
  *   post:
- *     summary: Upload a new wordlist
+ *     summary: Upload a new wordlist in JSON format
  *     tags: [Admin]
+ *     description: |
+ *       Uploads a new wordlist file in JSON format. The file must contain a "words" array where each word object has:
+ *       - id: unique integer
+ *       - word: the word string
+ *       - category: word category
+ *       - hints: array of hint strings (must not be empty)
  *     security:
  *       - bearerAuth: []
  *     requestBody:
@@ -467,13 +465,16 @@ router.put('/admin/settings', checkAdminPassword, async (req, res) => {
  *         multipart/form-data:
  *           schema:
  *             type: object
+ *             required:
+ *               - file
  *             properties:
  *               file:
  *                 type: string
  *                 format: binary
+ *                 description: JSON file containing wordlist data
  *     responses:
  *       200:
- *         description: Wordlist uploaded
+ *         description: Wordlist uploaded and activated successfully
  *         content:
  *           application/json:
  *             schema:
@@ -481,10 +482,28 @@ router.put('/admin/settings', checkAdminPassword, async (req, res) => {
  *               properties:
  *                 success:
  *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: Wordlist updated with 150 words
+ *       400:
+ *         description: Bad request - No file, invalid JSON, or invalid wordlist structure
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       401:
- *         description: Unauthorized
+ *         description: Unauthorized - Invalid admin password
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       500:
- *         description: Server error
+ *         description: Server error or file permission issue
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  */
 router.post('/admin/wordlist/upload', checkAdminPassword, upload.single('file'), (req, res) => {
   try {

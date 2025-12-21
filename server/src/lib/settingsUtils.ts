@@ -1,4 +1,4 @@
-import { query } from '../config/db';
+import { query } from './db.ts';
 
 interface GameSettings {
   showHintsToRegularUsers: boolean;
@@ -6,7 +6,7 @@ interface GameSettings {
   minPlayersToStart: number;
 }
 
-const DEFAULT_GAME_SETTINGS: GameSettings = {
+export const DEFAULT_GAME_SETTINGS: GameSettings = {
   showHintsToRegularUsers: false,
   adminPassword: 'spymaster2025',  // Default password
   minPlayersToStart: 3
@@ -16,7 +16,7 @@ const DEFAULT_GAME_SETTINGS: GameSettings = {
  * Get game settings from database
  * @returns GameSettings object with current settings
  */
-export const getGameSettings = async (): Promise<GameSettings> => {
+export async function getGameSettings(): Promise<GameSettings> {
   try {
     const result = await query(
       'SELECT value FROM settings WHERE key = $1',
@@ -44,7 +44,7 @@ export const getGameSettings = async (): Promise<GameSettings> => {
  * @param settings GameSettings object with updated values
  * @returns true if update was successful, false otherwise
  */
-export const updateGameSettings = async (settings: Partial<GameSettings>): Promise<boolean> => {
+export async function updateGameSettings(settings: Partial<GameSettings>): Promise<boolean> {
   try {
     // First get current settings
     const currentSettings = await getGameSettings();
@@ -81,7 +81,7 @@ export const updateGameSettings = async (settings: Partial<GameSettings>): Promi
  * @param password Password to verify
  * @returns true if password is correct, false otherwise
  */
-export const verifyAdminPassword = async (password: string): Promise<boolean> => {
+export async function verifyAdminPassword(password: string): Promise<boolean> {
   try {
     const settings = await getGameSettings();
     return password === settings.adminPassword;

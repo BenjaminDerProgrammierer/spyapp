@@ -46,3 +46,7 @@ Thumbs.db
 # Optional
 .eslintcache
 .nx/
+
+# Data
+/wordlists/private/*
+!/wordlists/private/.gitkeep
