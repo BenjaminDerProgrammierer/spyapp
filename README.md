@@ -32,6 +32,12 @@ npm run dev
 
 Frontend runs at `http://localhost:5173` and backend at `http://localhost:3000` by default in development.
 
+## Quick start — production
+
+```bash
+docker-compose up --build
+```
+
 ## Admin
 
 Default admin password used in local/dev setups: `spymaster2025`.

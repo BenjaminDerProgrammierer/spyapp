@@ -3,8 +3,6 @@ FROM node:22-slim AS client-build
 
 WORKDIR /app
 
-ENV NODE_ENV=production
-
 COPY client/package*.json ./
 
 RUN npm ci

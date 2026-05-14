@@ -23,8 +23,7 @@
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "socket.io-client": "^4.8.3",
-    "uuid": "^14.0.0",
-    "typescript": "~6.0.3"
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
     "@capacitor/cli": "8.3.4",
@@ -39,6 +38,7 @@
     "globals": "^17.6.0",
     "jsdom": "^29.1.1",
     "terser": "^5.47.1",
+    "typescript": "~6.0.3",
     "vite": "^8.0.13"
   },
   "description": "An Ionic project"
