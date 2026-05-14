@@ -10,6 +10,7 @@ services:
       DB_CONNECTION_STRING: postgresql://${DB_USER:-postgres}:${DB_PASSWORD:-postgres}@db:5432/${DB_NAME:-spyapp}
       PORT: ${PORT:-3000}
       SESSION_SECRET: ${SESSION_SECRET}
+      CLIENT_URL: http://localhost:${CLIENT_PORT:-3000}/,${CLIENT_URL}
     ports:
       - ${PORT:-3000}:${PORT:-3000}
     depends_on:
