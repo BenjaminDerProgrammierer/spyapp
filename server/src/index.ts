@@ -5,6 +5,7 @@ import cors from 'cors';
 import express, { type NextFunction, type Request, type Response } from 'express';
 import { Server as SocketIoServer } from 'socket.io';
 import swaggerUi from 'swagger-ui-express';
+import fs from 'fs';
 
 import { getGameSettings } from './lib/settingsUtils.ts';
 import { initializeDatabase } from './lib/db.ts';
@@ -66,6 +67,10 @@ if (isDevelopment) {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 if (isDevelopment) app.use(morgan('dev'));
+
+if (fs.existsSync('public')) {
+    app.use(express.static('public'));
+}
 
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
     console.error('Error:', err);
